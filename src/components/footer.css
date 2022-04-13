@@ -1,4 +1,13 @@
 .content_footer {
     height: 20vh;
-   
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    border-top: 1px solid #000;
+}
+
+footer small {
+     padding: 3rem;
 }

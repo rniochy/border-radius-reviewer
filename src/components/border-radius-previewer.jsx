@@ -9,7 +9,6 @@ const BorderRadiusPreviewer = () => {
     // const [border_bottom_right, setBorder_bottom_right ] = useState(5);
 
     useEffect(()=>{
-       let { border_top_left }= bordersValue;
     },[bordersValue])
 
     let value_ =""; 
@@ -17,7 +16,7 @@ const BorderRadiusPreviewer = () => {
          const {name,value} = e.target
         value_ += value;
         
-        if(value_.match(" ")){
+        if(value_.match(" ") && (value_.substring(value_.indexOf(" "), value_.length).length > 1)){
             value_ = value_.replace(" ", "px ") 
             setBordersValue({...bordersValue, [name]:value_});
             console.log(bordersValue)
@@ -25,9 +24,6 @@ const BorderRadiusPreviewer = () => {
         value_+="px"
         setBordersValue({...bordersValue, [name]:value_});
     }) 
-    
-   
-  
 
     return (
         <div className="content_app">
@@ -46,17 +42,24 @@ const BorderRadiusPreviewer = () => {
                  <div style={  bordersValue ? {
                      WebkitBorderTopLeftRadius: `${bordersValue.border_top_left}` ,
                      BorderTopLeftRadius: `${bordersValue.border_top_left}`,
-                     WebkitBorderTopRightRadius: `${bordersValue.border_top_right}px`,
-                     BorderTopRightRadius: `${bordersValue.border_top_right}px`,
-                     WebkitBorderBottomRightRadius: `${bordersValue.border_bottom_right}px`,
-                     BorderBottomRightRadius: `${bordersValue.border_bottom_right}px`,
-                     WebkitBorderBottomLeftRadius: `${bordersValue.border_bottom_left}px`,
-                     BorderBottomLeftRadius: `${bordersValue.border_bottom_left}px`,                  
+                     WebkitBorderTopRightRadius: `${bordersValue.border_top_right}`,
+                     BorderTopRightRadius: `${bordersValue.border_top_right}`,
+                     WebkitBorderBottomRightRadius: `${bordersValue.border_bottom_right}`,
+                     BorderBottomRightRadius: `${bordersValue.border_bottom_right}`,
+                     WebkitBorderBottomLeftRadius: `${bordersValue.border_bottom_left}`,
+                     BorderBottomLeftRadius: `${bordersValue.border_bottom_left}`,                  
                         }: 
                         {/** Is retuned when the value no it was changed */}
                     }
-                        className="box-with-border-radius">
-                            {/* {console.log(bordersValue.border_top_left)} */}
+                        className="box-with-border-radius" >
+
+                             <small style={
+                                 {
+                                     display: "block", 
+                                     textAlign:"center",
+                                     color: '#666'
+                                    }
+                                     } >Border-radius Previewer</small>
                  </div>
             </section>
         </div>

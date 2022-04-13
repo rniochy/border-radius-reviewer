@@ -11,7 +11,14 @@
 .box-with-border-radius {
      height: 13.0rem;
      width: 30rem;
-     border: 1px solid #ccc;     
+     border: 1px solid #ccc; 
+     
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+.section-content_body {
+      margin-top: 2rem;
 }
 input {
      height: 2.0rem;

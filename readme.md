@@ -1,3 +1,5 @@
+![](../vite-project/src/assets/page.png)
+
 ## User Stories
 
 -   [ ] User can see a box which has a `border-radius` property applied to it

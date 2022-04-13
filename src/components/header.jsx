@@ -5,7 +5,7 @@ const Header = () => {
     return (
         <div className="content_header">
              <header>
-                 Header
+             <h1>Border-radius Previewer</h1>
              </header>
         </div>
     );

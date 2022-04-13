@@ -1,4 +1,7 @@
 .content_header {
      height: 20vh;
+     width: 90%;
      padding: 2.5rem;
+     border-bottom: 1px solid #000;
+     margin-top: 3.5rem;
 }
