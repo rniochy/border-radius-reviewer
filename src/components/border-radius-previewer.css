@@ -1,0 +1,21 @@
+.section-content_body {
+     width: 95vw;
+     display: grid;
+     grid-template-columns: 40% 55%;
+     gap: 5%;
+}
+.section-content_body article {
+     display: flex;
+     flex-direction: column;
+}
+.box-with-border-radius {
+     height: 13.0rem;
+     width: 30rem;
+     border: 1px solid #ccc;     
+}
+input {
+     height: 2.0rem;
+     width: 13.6rem;
+     border: 1px solid #ccc;
+     text-indent: 10px;;
+}
